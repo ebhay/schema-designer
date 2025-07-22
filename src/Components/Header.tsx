@@ -1,4 +1,4 @@
-import { Share, Users } from "lucide-react";
+import { Users } from "lucide-react";
 import Dropdown from "./Dropdown";
 import { Button } from "./ui/button";
 import { useState, type SetStateAction } from "react";
