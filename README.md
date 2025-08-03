@@ -6,6 +6,8 @@ Schema Designer is a powerful tool for creating and managing database schemas. I
 
 The Schema Designer application allows users to create tables, define relationships, and generate code for popular databases such as SQL, MySQL, PostgreSQL, and MongoDB. With its AI-powered code generation feature, users can quickly create database code based on their schema definitions.
 
+<img width="1919" height="903" alt="image" src="https://github.com/user-attachments/assets/7c3b7974-da45-48bc-9103-48e46c2cdfb1" />
+
 ## ✨ Key Features
 
 ### **Schema Design**
