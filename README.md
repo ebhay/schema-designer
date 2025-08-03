@@ -1,116 +1,91 @@
-# 🗃️ Schema Designer
+# Schema Designer
+![thumbnail](https://img.shields.io/badge/React-19.1.0-blue)
+## 🗂️ Description
 
-A modern, interactive database schema design tool built with React, TypeScript, and React Flow. Design, visualize, and export database schemas with an intuitive drag-and-drop interface.
+Schema Designer is a powerful tool for creating and managing database schemas. It provides an intuitive interface for designing, visualizing, and generating code for various database types. This project is ideal for developers, database administrators, and data analysts who need to create and manage complex database schemas.
 
-![React](https://img.shields.io/badge/React-19.1.0-blue)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue)
-![React Flow](https://img.shields.io/badge/React%20Flow-12.8.1-green)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4.1.11-blue)
-<img width="1909" height="894" alt="image" src="https://github.com/user-attachments/assets/03ba33fd-4ade-43cf-9b71-5e51554aefda" />
+The Schema Designer application allows users to create tables, define relationships, and generate code for popular databases such as SQL, MySQL, PostgreSQL, and MongoDB. With its AI-powered code generation feature, users can quickly create database code based on their schema definitions.
 
-## ✨ Features
+## ✨ Key Features
 
-- **🎨 Visual Schema Design** - Interactive drag-and-drop canvas with real-time connections
-- **🔧 Smart Table Management** - 12+ field types, constraints, and dynamic editing
-- **🔗 Relationship Management** - Visual connections with 1:1, 1:N, and N:N support
-- **💾 Export Options** - SQL generation, JSON schema, and AI code generation
-- **⌨️ Keyboard Shortcuts** - Efficient workflow with hotkeys
-- **🗺️ MiniMap** - Navigate large schemas easily
-- **🌙 Dark Mode** - Modern glass morphism UI
+### **Schema Design**
+* Create and manage tables with fields and relationships
+* Define relationships between tables (1:1, 1:N, N:N)
+* Visualize schema designs with a interactive graph
 
-## 🚀 Quick Start
+### **Code Generation**
+* Generate code for popular databases (SQL, MySQL, PostgreSQL, MongoDB, etc.)
+* AI-powered code generation using Google Gemini API
+* Customizable code generation with user-defined requirements
 
-```bash
-# Clone and install
-git clone https://github.com/ebhay/schema-designer.git
-cd schema-designer
-npm install
+### **User Interface**
+* Interactive graph for visualizing schema designs
+* Customizable nodes and edges for table and relationship representation
+* User-friendly interface for adding and managing fields and relationships
 
-# Start development
-npm run dev
+## 🗂️ Folder Structure
 
-# Open http://localhost:5173
+```mermaid
+graph TD;
+src-->components;
+src-->lib;
+src-->Icons;
+components-->Header;
+components-->Canvas;
+components-->CustomNode;
+lib-->aiService;
+lib-->utils;
+lib-->types;
 ```
-
-## 📖 Usage
-
-### Basic Workflow
-1. **Add Tables** - Click "Add Table" or `Ctrl+N`
-2. **Edit Fields** - Click "+" to add fields, configure types and constraints
-3. **Create Relationships** - Drag between field handles to connect tables
-4. **Export** - Use `Ctrl+E` for JSON or generate SQL
-
-### Keyboard Shortcuts
-| Key | Action |
-|-----|--------|
-| `Ctrl+N` | Add table |
-| `Ctrl+E` | Export schema |
-| `Ctrl+G` | AI code generation |
-| `Ctrl+M` | Toggle minimap |
-
-### Supported Field Types
-INTEGER, STRING, VARCHAR, TEXT, BOOLEAN, DATE, DATETIME, FLOAT, DECIMAL, JSON, UUID, ENUM
 
 ## 🛠️ Tech Stack
 
-- **React 19.1.0** + **TypeScript 5.8.3** - Core framework
-- **React Flow 12.8.1** - Node-based UI
-- **Tailwind CSS 4.1.11** - Styling
-- **Zustand 5.0.6** - State management
-- **Vite 7.0.4** - Build tool
+![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?logo=typescript&logoColor=white&style=for-the-badge)
+![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white&style=for-the-badge)
+![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white&style=for-the-badge)
+![React Flow](https://img.shields.io/badge/React%20Flow-007bff?logo=react-flow&logoColor=white&style=for-the-badge)
+![Google Gemini API](https://img.shields.io/badge/Google%20Gemini%20API-4285F4?logo=google-gemini&logoColor=white&style=for-the-badge)
 
-## 📁 Project Structure
+## ⚙️ Setup Instructions
 
-```
-src/
-├── components/
-│   ├── ui/                 # Reusable components
-│   ├── Canvas.tsx          # Main canvas
-│   ├── CustomNode.tsx      # Table nodes
-│   └── CustomEdge.tsx      # Relationships
-├── lib/
-│   ├── types.ts           # Type definitions
-│   ├── utils.ts           # Utilities
-│   └── aiService.ts       # AI integration
-└── assets/                # Static files
-```
+* Git clone the repository: `https://github.com/ebhay/schema-designer.git`
+* Install dependencies: `pnpm install`
+* Start the application: `pnpm run dev`
+* Open the application in your browser: `http://localhost:5173`
 
-## ⚙️ Configuration
+## 📝 Features and Changelog
 
-Create `.env.local` for AI features:
-```env
-VITE_AI_API_KEY=your_ai_api_key_here
-VITE_API_BASE_URL=https://your-api-endpoint.com
-```
+For a detailed list of features, updates, and changelog, please refer to the [FEATURES.md](FEATURES.md) file.
 
-## 🤝 Contributing
+## 🤖 AI Service
 
-1. Fork the repo
-2. Create feature branch: `git checkout -b feature/amazing-feature`
-3. Commit changes: `git commit -m 'Add amazing feature'`
-4. Push branch: `git push origin feature/amazing-feature`
-5. Open Pull Request
+The AI service is powered by the Google Gemini API and is used for generating database code based on schema definitions and relationships. For more information, please refer to the [aiService.ts](src/lib/aiService.ts) file.
 
-## 📝 Scripts
+## 🚀 GitHub Actions
 
-```bash
-npm run dev      # Development server
-npm run build    # Production build
-npm run preview  # Preview build
-npm run lint     # Code linting
-```
+This repository uses GitHub Actions for continuous integration and deployment. The workflow is defined in the `.github/workflows/main.yml` file and includes steps for building, testing, and deploying the application.
 
-## 🗺️ Roadmap
+## 📁 Code Structure
 
-- [ ] Database connection and reverse engineering
-- [ ] GraphQL and Prisma schema export
-- [ ] Real-time collaboration
-- [ ] Schema templates
+The codebase is organized into the following main directories:
 
-## 📄 License
+* `src`: The main source code directory
+* `components`: Reusable UI components
+* `lib`: Utility functions and libraries
+* `Icons`: Icon components
 
-MIT License - see [LICENSE](LICENSE) file for details.
+Each directory has its own set of subdirectories and files, which are organized based on their functionality and purpose.
 
----
 
-⭐ **Star this repo if you find it helpful!**
+
+<br><br>
+<div align="center">
+<img src="https://avatars.githubusercontent.com/u/111756624?v=4" width="120" />
+<h3>Abhay Gupta</h3>
+<p>Developer passionate about breaking down complex systems to extract valuable insights and applying that knowledge to craft improved user experiences.</p>
+</div>
+<br>
+<p align="right">
+<img src="https://gitfull.vercel.app/appLogo.png" width="20"/>  <a href="https://gitfull.vercel.app">Made by GitFull</a>
+</p>
+    
